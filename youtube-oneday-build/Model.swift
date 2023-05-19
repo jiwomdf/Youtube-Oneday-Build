@@ -13,31 +13,36 @@ class Model {
         
         //Create url object
         let url = URL(string: Constans.API_URL)
+        //TODO JIWO
+        print(url)
+        
         guard url != nil else {return}
         
-        //Get URLSession object
-        let session = URLSession.shared
+        var request = URLRequest(url: url!)
+        request.httpMethod = "GET"
+        request.setValue("Authorization", forHTTPHeaderField: "Bearer \(Constans.API_KEY)")
+        request.setValue("Accept", forHTTPHeaderField: "application/json")
+
         
         //Get a data task from the URLSession obj
-        let dataTask = session.dataTask(with: url!) { data, response, error in
-            
-            print("jiwo")
-            //print(data)
-            print(response)
-            //print(error)
-            
-            if let httpResponse = response as? HTTPURLResponse {
-                print("error \(httpResponse)")
-            }
-
-
+        let dataTask = URLSession.shared.dataTask(with: url!) { data, response, error in
             
             //Check if any error
             if error != nil || data == nil {
                 return
             }
             
-            //Parsing the data
+            do {
+                //Parsing the data into video obj
+                let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .iso8601
+                
+                let response = try decoder.decode(Response.self, from: data!)
+                
+                dump(response)
+            } catch {
+                print("catch \(error)")
+            }
             
         }
         

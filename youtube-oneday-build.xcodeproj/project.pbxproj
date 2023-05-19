@@ -19,6 +19,7 @@
 		04D6A7472A13C4470062FEFD /* youtube_oneday_buildTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6A7462A13C4470062FEFD /* youtube_oneday_buildTests.swift */; };
 		04D6A7512A13C4470062FEFD /* youtube_oneday_buildUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6A7502A13C4470062FEFD /* youtube_oneday_buildUITests.swift */; };
 		04D6A7532A13C4470062FEFD /* youtube_oneday_buildUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6A7522A13C4470062FEFD /* youtube_oneday_buildUITestsLaunchTests.swift */; };
+		04E3FEA92A1758170051C2AD /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E3FEA82A1758170051C2AD /* Response.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		04D6A74C2A13C4470062FEFD /* youtube-oneday-buildUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "youtube-oneday-buildUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D6A7502A13C4470062FEFD /* youtube_oneday_buildUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = youtube_oneday_buildUITests.swift; sourceTree = "<group>"; };
 		04D6A7522A13C4470062FEFD /* youtube_oneday_buildUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = youtube_oneday_buildUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		04E3FEA82A1758170051C2AD /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				0420264A2A16527400629B33 /* Constants.swift */,
 				0420264C2A1654C900629B33 /* Video.swift */,
 				0420264E2A16554800629B33 /* Model.swift */,
+				04E3FEA82A1758170051C2AD /* Response.swift */,
 			);
 			path = "youtube-oneday-build";
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				0420264F2A16554800629B33 /* Model.swift in Sources */,
 				0420264B2A16527400629B33 /* Constants.swift in Sources */,
 				0420264D2A1654C900629B33 /* Video.swift in Sources */,
+				04E3FEA92A1758170051C2AD /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
