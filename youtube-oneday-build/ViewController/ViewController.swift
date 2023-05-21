@@ -27,6 +27,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         model.getVideo()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard tableView.indexPathForSelectedRow != nil else { return }
+        
+        let selectedVideo = videos[tableView.indexPathForSelectedRow!.row]
+        
+        let detailVC = segue.destination as! DetailViewController
+        detailVC.video = selectedVideo
+    }
+    
     // MARK: - Model delegate method
     func videoFetched(_ video: [Video]) {
         //set the return video to our video property
@@ -46,7 +56,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.setCell(video)
         
         return cell
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
